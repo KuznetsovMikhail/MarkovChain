@@ -60,7 +60,7 @@ jobs:
       - run: pwd && ls
       - name: Main
         if: ${{ success() }}
-        run: /home/runner/work/MarkovChain/MarkovChain/build/src/main.cpp
+        run: /home/runner/work/MarkovChain/MarkovChain/build/src/MarkovChain.info
       
   on_finish:
     needs: build_and_test
