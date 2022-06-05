@@ -6,6 +6,6 @@ with open('Source/Oxxxymiron.txt') as inf:
     with open('Source/OxxxymironClean.txt', 'a+', encoding='utf-8') as ouf:
         ouf.write(re.sub(r'<.+>\n', '', text))
 
-print(*songs, sep='\n\n')
+print(*songs, sep = '\n\n')
 
 print(len(songs))
