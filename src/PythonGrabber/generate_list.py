@@ -2,7 +2,6 @@
 
 import re
 
-
 with open('alboum_names.txt') as inf:
     text = inf.read()
     albums = re.findall(r'https://genius.com/albums/Oxxxymiron/[a-zA-Z0-9-]+', text)
