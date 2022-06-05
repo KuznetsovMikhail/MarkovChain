@@ -1,0 +1,26 @@
+<album-tracklist-row ng-repeat="album_appearance in $ctrl.page_data.album_appearances track by album_appearance.id" album-appearance="album_appearance" show-artist="$ctrl.page_data.album.artist.id !== album_appearance.song.primary_artist.id"><div class="chart_row chart_row--light_border chart_row--full_bleed_left chart_row--align_baseline chart_row--no_hover">
+  <div class="chart_row-number_container chart_row-number_container--align_left">
+    <span class="chart_row-number_container-number chart_row-number_container-number--gray">
+      <span>7</span>
+    </span>
+  </div>
+  <div class="chart_row-content">
+    <!----><a ng-if="$ctrl.can('view')" ng-href="https://genius.com/Bones-1999daylightsavings-lyrics" class="u-display_block" href="https://genius.com/Bones-1999daylightsavings-lyrics">
+      <h3 class="chart_row-content-title">
+        1999(DayLightSavings)
+        <span class="chart_row-content-title-subtitle">Lyrics</span>
+        <!---->
+      </h3>
+    </a><!---->
+    <!---->
+    <!---->
+  </div>
+  <!---->
+  <!---->
+  <!---->
+  <!---->
+  <div class="chart_row-expand u-increase_tap_area_full_space" ng-class="{'chart_row-expand--expanded': $ctrl.expanded}" ng-click="$ctrl.expanded = !$ctrl.expanded">
+    <!----><svg src="down_arrow.svg" ng-if="($ctrl.album_appearance.song.description_preview || $ctrl.has_credits() || $ctrl.can('edit_anything'))" class="inline_icon inline_icon--gray inline_icon--up_1 inline_icon--short" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.32 10.91"><path d="M10.66 10.91L0 1.5 1.32 0l9.34 8.24L20 0l1.32 1.5-10.66 9.41"></path></svg><!---->
+  </div>
+</div>
+</album-tracklist-row>

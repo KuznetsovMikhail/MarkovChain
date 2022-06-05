@@ -1,0 +1,114 @@
+<div class="modal_window-content modal_window-content--narrow_width modal_window-content--white_background" ng-class="{
+      'modal_window-content--full_height': variants.full_height || !!media,
+      'modal_window-content--narrow_width': variants.narrow_width,
+      'modal_window-content--window_width': variants.window_width,
+      'modal_window-content--no_max_width': variants.no_max_width,
+      'modal_window-content--no_background': variants.no_background,
+      'modal_window-content--white_background': variants.white_background,
+      'modal_window-content--dark_background': variants.dark_background,
+      'modal_window-content--vertically_center_contents': variants.vertically_center_contents,
+      'modal_window-content--vertically_center_self': variants.vertically_center_self,
+      'modal_window-content--width_of_contents': variants.width_of_contents,
+      'modal_window-content--with_media': !!media,
+    }" stop-propagation="click" click-outside-target="" ng-style="{
+      top: content_dimensions.top + 'px',
+      height: content_dimensions.height + 'px',
+      width: content_dimensions.width + 'px',
+    }">
+    <ng-transclude ng-class="{
+        'u-width_100': variants.full_width_parent,
+        'modal_window-content-transclude': !!media
+      }">
+  <scrollable-data src="$ctrl.artist_album_scrollable_data" scroll-mechanism="infinite_scroll" repeat-with="album"><!---->
+
+<!----><div ng-if="$scrollable_data_ctrl.models.length" class="">
+  <!----><transclude-injecting-local-scope ng-repeat="scrollable_data_model in $scrollable_data_ctrl.models track by $id(scrollable_data_model)" copy-value-to-scope="{key: $scrollable_data_ctrl.repeat_with, value: scrollable_data_model}" class="u-display_block ">
+    <div class="profile_list_item" ng-class="{'profile_list_item--last': $last}">
+      <mini-album-card object="album" variants="{small: true}"><a href="https://genius.com/albums/Oxxxymiron/O3" title="O3" class="mini_card mini_card--small" ng-class="{'mini_card--small': $ctrl.variants.small}">
+  <div class="mini_card-thumbnail clipped_background_image--background_fill clipped_background_image" clipped-background-image=":: $ctrl.album.cover_art_thumbnail_url" style="background-image: url(&quot;https://assets.genius.com/images/default_cover_art.png?1619628149&quot;);"></div>
+  <div class="mini_card-info">
+    <div class="mini_card-title_and_subtitle">
+      <div class="mini_card-title">O3</div>
+      <div class="mini_card-subtitle">2021</div>
+    </div>
+  </div>
+</a>
+</mini-album-card>
+    </div>
+  </transclude-injecting-local-scope><!----><transclude-injecting-local-scope ng-repeat="scrollable_data_model in $scrollable_data_ctrl.models track by $id(scrollable_data_model)" copy-value-to-scope="{key: $scrollable_data_ctrl.repeat_with, value: scrollable_data_model}" class="u-display_block ">
+    <div class="profile_list_item" ng-class="{'profile_list_item--last': $last}">
+      <mini-album-card object="album" variants="{small: true}"><a href="https://genius.com/albums/Oxxxymiron/Gorgorod" title="ГОРГОРОД (GORGOROD)" class="mini_card mini_card--small" ng-class="{'mini_card--small': $ctrl.variants.small}">
+  <div class="mini_card-thumbnail clipped_background_image--background_fill clipped_background_image" clipped-background-image=":: $ctrl.album.cover_art_thumbnail_url" style="background-image: url(&quot;https://t2.genius.com/unsafe/150x150/https%3A%2F%2Fimages.genius.com%2F60279e8619809e25f9dd1ec85e8fc32d.300x300x1.png&quot;);"></div>
+  <div class="mini_card-info">
+    <div class="mini_card-title_and_subtitle">
+      <div class="mini_card-title">ГОРГОРОД (GORGOROD)</div>
+      <div class="mini_card-subtitle">2015</div>
+    </div>
+  </div>
+</a>
+</mini-album-card>
+    </div>
+  </transclude-injecting-local-scope><!----><transclude-injecting-local-scope ng-repeat="scrollable_data_model in $scrollable_data_ctrl.models track by $id(scrollable_data_model)" copy-value-to-scope="{key: $scrollable_data_ctrl.repeat_with, value: scrollable_data_model}" class="u-display_block ">
+    <div class="profile_list_item" ng-class="{'profile_list_item--last': $last}">
+      <mini-album-card object="album" variants="{small: true}"><a href="https://genius.com/albums/Oxxxymiron/Mixxxtape-ii-the-long-way-home" title="miXXXtape&nbsp;II: Долгий путь домой (The Long Way Home)" class="mini_card mini_card--small" ng-class="{'mini_card--small': $ctrl.variants.small}">
+  <div class="mini_card-thumbnail clipped_background_image--background_fill clipped_background_image" clipped-background-image=":: $ctrl.album.cover_art_thumbnail_url" style="background-image: url(&quot;https://t2.genius.com/unsafe/150x150/https%3A%2F%2Fimages.genius.com%2Ffbde8b9ffb12c96d6782f98971d074f9.300x300x1.jpg&quot;);"></div>
+  <div class="mini_card-info">
+    <div class="mini_card-title_and_subtitle">
+      <div class="mini_card-title">miXXXtape&nbsp;II: Долгий путь домой (The Long Way Home)</div>
+      <div class="mini_card-subtitle">2013</div>
+    </div>
+  </div>
+</a>
+</mini-album-card>
+    </div>
+  </transclude-injecting-local-scope><!----><transclude-injecting-local-scope ng-repeat="scrollable_data_model in $scrollable_data_ctrl.models track by $id(scrollable_data_model)" copy-value-to-scope="{key: $scrollable_data_ctrl.repeat_with, value: scrollable_data_model}" class="u-display_block ">
+    <div class="profile_list_item" ng-class="{'profile_list_item--last': $last}">
+      <mini-album-card object="album" variants="{small: true}"><a href="https://genius.com/albums/Oxxxymiron/Mixxxtape-i" title="miXXXtape&nbsp;I" class="mini_card mini_card--small" ng-class="{'mini_card--small': $ctrl.variants.small}">
+  <div class="mini_card-thumbnail clipped_background_image--background_fill clipped_background_image" clipped-background-image=":: $ctrl.album.cover_art_thumbnail_url" style="background-image: url(&quot;https://t2.genius.com/unsafe/150x150/https%3A%2F%2Fimages.genius.com%2F128a070a1858383b4cb18bb987c00d47.300x300x1.jpg&quot;);"></div>
+  <div class="mini_card-info">
+    <div class="mini_card-title_and_subtitle">
+      <div class="mini_card-title">miXXXtape&nbsp;I</div>
+      <div class="mini_card-subtitle">2012</div>
+    </div>
+  </div>
+</a>
+</mini-album-card>
+    </div>
+  </transclude-injecting-local-scope><!----><transclude-injecting-local-scope ng-repeat="scrollable_data_model in $scrollable_data_ctrl.models track by $id(scrollable_data_model)" copy-value-to-scope="{key: $scrollable_data_ctrl.repeat_with, value: scrollable_data_model}" class="u-display_block ">
+    <div class="profile_list_item" ng-class="{'profile_list_item--last': $last}">
+      <mini-album-card object="album" variants="{small: true}"><a href="https://genius.com/albums/Oxxxymiron/Eternal-jew" title="Вечный жид (Eternal Jew)" class="mini_card mini_card--small" ng-class="{'mini_card--small': $ctrl.variants.small}">
+  <div class="mini_card-thumbnail clipped_background_image--background_fill clipped_background_image" clipped-background-image=":: $ctrl.album.cover_art_thumbnail_url" style="background-image: url(&quot;https://t2.genius.com/unsafe/150x150/https%3A%2F%2Fimages.genius.com%2F64bf922b95e212a0d7f7e918e0f857b6.300x300x1.jpg&quot;);"></div>
+  <div class="mini_card-info">
+    <div class="mini_card-title_and_subtitle">
+      <div class="mini_card-title">Вечный жид (Eternal Jew)</div>
+      <div class="mini_card-subtitle">2011</div>
+    </div>
+  </div>
+</a>
+</mini-album-card>
+    </div>
+  </transclude-injecting-local-scope><!----><transclude-injecting-local-scope ng-repeat="scrollable_data_model in $scrollable_data_ctrl.models track by $id(scrollable_data_model)" copy-value-to-scope="{key: $scrollable_data_ctrl.repeat_with, value: scrollable_data_model}" class="u-display_block ">
+    <div class="profile_list_item profile_list_item--last" ng-class="{'profile_list_item--last': $last}">
+      <mini-album-card object="album" variants="{small: true}"><a href="https://genius.com/albums/Oxxxymiron/Unreleased-songs" title="Unreleased Songs" class="mini_card mini_card--small" ng-class="{'mini_card--small': $ctrl.variants.small}">
+  <div class="mini_card-thumbnail clipped_background_image--background_fill clipped_background_image" clipped-background-image=":: $ctrl.album.cover_art_thumbnail_url" style="background-image: url(&quot;https://assets.genius.com/images/default_cover_art.png?1619628149&quot;);"></div>
+  <div class="mini_card-info">
+    <div class="mini_card-title_and_subtitle">
+      <div class="mini_card-title">Unreleased Songs</div>
+      <div class="mini_card-subtitle"></div>
+    </div>
+  </div>
+</a>
+</mini-album-card>
+    </div>
+  </transclude-injecting-local-scope><!---->
+</div><!---->
+
+<!---->
+
+<!---->
+</scrollable-data>
+</ng-transclude>
+    <!---->
+
+    <!---->
+  </div>

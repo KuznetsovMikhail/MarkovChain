@@ -1,0 +1,200 @@
+
+<div class="column_layout u-top_margin">
+  <div class="column_layout-column_span column_layout-column_span--primary">
+    <h2
+      class="text_label text_label--gray u-half_bottom_margin"
+    >[KNUCKLEHEAD] Tracklist</h2>
+
+    
+      <div class="chart_row chart_row--light_border chart_row--full_bleed_left chart_row--align_baseline chart_row--no_hover">
+        <div class="chart_row-number_container chart_row-number_container--align_left">
+          <span class="chart_row-number_container-number chart_row-number_container-number--gray">
+            <span>1</span>
+          </span>
+        </div>
+        <div class="chart_row-content">
+          <a href="https://genius.com/Bones-curtains-lyrics" class="u-display_block">
+            <h3 class="chart_row-content-title">
+              Curtains
+              <span class="chart_row-content-title-subtitle">Lyrics</span>
+              
+            </h3>
+          </a>
+        </div>
+        
+          
+          
+        
+        <div class="chart_row-expand">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 21.32 10.91" class="inline_icon inline_icon--gray inline_icon--up_1 inline_icon--short"><path d="M10.66 10.91L0 1.5 1.32 0l9.34 8.24L20 0l1.32 1.5-10.66 9.41"></path></svg>
+
+        </div>
+      </div>
+    
+      <div class="chart_row chart_row--light_border chart_row--full_bleed_left chart_row--align_baseline chart_row--no_hover">
+        <div class="chart_row-number_container chart_row-number_container--align_left">
+          <span class="chart_row-number_container-number chart_row-number_container-number--gray">
+            <span>2</span>
+          </span>
+        </div>
+        <div class="chart_row-content">
+          <a href="https://genius.com/Bones-fat-man-jeans-lyrics" class="u-display_block">
+            <h3 class="chart_row-content-title">
+              Fat Man Jeans
+              <span class="chart_row-content-title-subtitle">Lyrics</span>
+              
+            </h3>
+          </a>
+        </div>
+        
+          
+          
+        
+        <div class="chart_row-expand">
+          
+        </div>
+      </div>
+    
+      <div class="chart_row chart_row--light_border chart_row--full_bleed_left chart_row--align_baseline chart_row--no_hover">
+        <div class="chart_row-number_container chart_row-number_container--align_left">
+          <span class="chart_row-number_container-number chart_row-number_container-number--gray">
+            <span>3</span>
+          </span>
+        </div>
+        <div class="chart_row-content">
+          <a href="https://genius.com/Bones-twilight-zone-lyrics" class="u-display_block">
+            <h3 class="chart_row-content-title">
+              Twilight Zone
+              <span class="chart_row-content-title-subtitle">Lyrics</span>
+              
+            </h3>
+          </a>
+        </div>
+        
+          
+          
+        
+        <div class="chart_row-expand">
+          
+        </div>
+      </div>
+    
+      <div class="chart_row chart_row--light_border chart_row--full_bleed_left chart_row--align_baseline chart_row--no_hover">
+        <div class="chart_row-number_container chart_row-number_container--align_left">
+          <span class="chart_row-number_container-number chart_row-number_container-number--gray">
+            <span>4</span>
+          </span>
+        </div>
+        <div class="chart_row-content">
+          <a href="https://genius.com/Bones-mr-how-high-lyrics" class="u-display_block">
+            <h3 class="chart_row-content-title">
+              Mr How High
+              <span class="chart_row-content-title-subtitle">Lyrics</span>
+              
+            </h3>
+          </a>
+        </div>
+        
+          
+          
+        
+        <div class="chart_row-expand">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 21.32 10.91" class="inline_icon inline_icon--gray inline_icon--up_1 inline_icon--short"><path d="M10.66 10.91L0 1.5 1.32 0l9.34 8.24L20 0l1.32 1.5-10.66 9.41"></path></svg>
+
+        </div>
+      </div>
+    
+      <div class="chart_row chart_row--light_border chart_row--full_bleed_left chart_row--align_baseline chart_row--no_hover">
+        <div class="chart_row-number_container chart_row-number_container--align_left">
+          <span class="chart_row-number_container-number chart_row-number_container-number--gray">
+            <span>5</span>
+          </span>
+        </div>
+        <div class="chart_row-content">
+          <a href="https://genius.com/Bones-gohardhuh-lyrics" class="u-display_block">
+            <h3 class="chart_row-content-title">
+              Gohardhuh
+              <span class="chart_row-content-title-subtitle">Lyrics</span>
+              
+            </h3>
+          </a>
+        </div>
+        
+         <div class="chart_row-metadata_element chart_row-metadata_element--large">
+           (Missing Lyrics)
+         </div>
+        
+        <div class="chart_row-expand">
+          
+        </div>
+      </div>
+    
+      <div class="chart_row chart_row--light_border chart_row--full_bleed_left chart_row--align_baseline chart_row--no_hover">
+        <div class="chart_row-number_container chart_row-number_container--align_left">
+          <span class="chart_row-number_container-number chart_row-number_container-number--gray">
+            <span>6</span>
+          </span>
+        </div>
+        <div class="chart_row-content">
+          <a href="https://genius.com/Bones-radical-lyrics" class="u-display_block">
+            <h3 class="chart_row-content-title">
+              Radical
+              <span class="chart_row-content-title-subtitle">Lyrics</span>
+              
+            </h3>
+          </a>
+        </div>
+        
+          
+          
+        
+        <div class="chart_row-expand">
+          
+        </div>
+      </div>
+    
+      <div class="chart_row chart_row--light_border chart_row--full_bleed_left chart_row--align_baseline chart_row--no_hover">
+        <div class="chart_row-number_container chart_row-number_container--align_left">
+          <span class="chart_row-number_container-number chart_row-number_container-number--gray">
+            <span>7</span>
+          </span>
+        </div>
+        <div class="chart_row-content">
+          <a href="https://genius.com/Bones-geronimo-remix-ft-the-lockwest-monster-lyrics" class="u-display_block">
+            <h3 class="chart_row-content-title">
+              Geronimo Remix ft. The LockWest Monster
+              <span class="chart_row-content-title-subtitle">Lyrics</span>
+              
+            </h3>
+          </a>
+        </div>
+        
+          
+          
+        
+        <div class="chart_row-expand">
+          
+        </div>
+      </div>
+    
+  </div>
+  <div class="column_layout-column_span column_layout-column_span--secondary">
+    <div class="white_container">
+      <div class="annotation_label">
+        About “[KNUCKLEHEAD]”
+      </div>
+      <div class="rich_text_formatting">
+        
+      </div>
+    </div>
+
+    <h4
+      class="text_label text_label--gray u-x_large_top_margin u-half_bottom_margin"
+    >“[KNUCKLEHEAD]” Q&amp;A</h4>
+    <div class="white_container">
+      <div initial-content-for="question_list">
+  <ul>
+    
+    
+  </ul>
+</div>
