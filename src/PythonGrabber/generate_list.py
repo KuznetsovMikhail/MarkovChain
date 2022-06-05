@@ -24,7 +24,7 @@ with open('Source/Oxxxymiron.txt', 'a+', encoding='utf-8') as ouf:
 
         # The assembled request
         request = urllib.request.Request(album_url, None, headers)
-        
+
         # The data u need
         response = urllib.request.urlopen(request)
         data = response.read().decode('utf-8')
@@ -39,7 +39,7 @@ with open('Source/Oxxxymiron.txt', 'a+', encoding='utf-8') as ouf:
 
         print(*songs, sep='\n')
 
-        #print(len(songs), url)
+        # print(len(songs), url)
 
         album = ''
 
@@ -53,13 +53,15 @@ with open('Source/Oxxxymiron.txt', 'a+', encoding='utf-8') as ouf:
 
             text = re.sub(
                 r'\n\s*\r', '', re.sub(r'\[.+\]\n', '',
-                re.sub(r'</p>.+', '', re.sub(r'.+<p>', '',
+                re.sub(r'</p>.+', '', re.sub(
+                r'.+<p>', '',
                 re.sub(r'<i>|</i>|</a>|<br>', '', re.sub(r'<a.*?>', '',
-                re.findall(r'<div class="lyrics">'
+                re.findall(
+                r'<div class="lyrics">'
                 + r'\n.*\n.*<!--sse-->.+<!--/sse-->',
                 data, re.S)[0], flags=re.S)), flags=re.S), flags=re.S)))
-            
+                
             album += text + '\n#\n'
             # print(text)
-    
+
         ouf.write(album)
