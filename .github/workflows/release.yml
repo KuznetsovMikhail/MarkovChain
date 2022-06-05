@@ -52,6 +52,16 @@ jobs:
     - name: Run Test
       run: /home/runner/work/MarkovChain/MarkovChain/build/test/MarkovChain.test
       
+  run_main:
+    needs: build_and_test
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps: 
+      - run: pwd && ls
+      - name: Main
+        if: ${{ success() }}
+        run: /home/runner/work/MarkovChain/MarkovChain/build/src/main.cpp
+      
   on_finish:
     needs: build_and_test
     if: ${{ always() }}
