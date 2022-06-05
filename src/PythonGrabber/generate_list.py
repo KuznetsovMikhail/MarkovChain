@@ -63,7 +63,7 @@ with open('Source/Oxxxymiron.txt', 'a+', encoding='utf-8') as ouf:
                                     r'<div class="lyrics">'
                                     + r'\n.*\n.*<!--sse-->.+<!--/sse-->',
                                     data, re.S)[0],
-                            flags=re.S)), flags=re.S), flags=re.S)))
+                                flags=re.S)), flags=re.S), flags=re.S)))
 
             album += text + '\n#\n'
             # print(text)
