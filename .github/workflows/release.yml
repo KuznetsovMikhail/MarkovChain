@@ -4,9 +4,9 @@ on: [push, pull_request]
 
 jobs:
 
-  flake8-lint:
+  python-lint:
     runs-on: ubuntu-latest
-    name: Lint
+    name: Python lint
     steps:
       - name: Check out source repository
         uses: actions/checkout@v2
@@ -14,25 +14,26 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: "3.8"
-      - name: flake8 Lint
+      - name: flake8 lint
         uses: py-actions/flake8@v2
 
-  lint_test:
+  cpp-lint:
     runs-on: ubuntu-latest
-    name: Check code
+    name: C++ lint
     steps:
       - uses: actions/checkout@v2
       - uses: ./myaction
 
   build_and_test:
     runs-on: ubuntu-latest
+    name: Build and test
     steps:
     - name: Install gtest 
       run: sudo apt-get install g++ cmake libgtest-dev
     - uses: actions/checkout@v1
-    - name: configure
+    - name: Configure
       run: mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Werror" ..
-    - name: make
+    - name: Make
       run: cd build && make
     - name: Run Test
       run: /home/runner/work/MarkovChain/MarkovChain/build/test/MarkovChain.test
