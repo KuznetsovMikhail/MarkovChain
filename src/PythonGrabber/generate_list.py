@@ -59,11 +59,11 @@ with open('Source/Oxxxymiron.txt', 'a+', encoding='utf-8') as ouf:
                         re.sub(
                             r'<i>|</i>|</a>|<br>', '',
                             re.sub(r'<a.*?>', '',
-                            re.findall(
-                                r'<div class="lyrics">'
-                                + r'\n.*\n.*<!--sse-->.+<!--/sse-->',
-                                data, re.S)[0],
-                                flags=re.S)), flags=re.S), flags=re.S)))
+                                re.findall(
+                                    r'<div class="lyrics">'
+                                    + r'\n.*\n.*<!--sse-->.+<!--/sse-->',
+                                    data, re.S)[0],
+                                    flags=re.S)), flags=re.S), flags=re.S)))
 
             album += text + '\n#\n'
             # print(text)
