@@ -52,15 +52,16 @@ with open('Source/Oxxxymiron.txt', 'a+', encoding='utf-8') as ouf:
             data = response.read().decode('utf-8')
 
             text = re.sub(
-                r'\n\s*\r', '', re.sub(r'\[.+\]\n', '',
-                re.sub(r'</p>.+', '', re.sub(
+                r'\n\s*\r', '', re.sub(
+                    r'\[.+\]\n', '',
+                    re.sub(r'</p>.+', '', re.sub(
                 r'.+<p>', '',
                 re.sub(r'<i>|</i>|</a>|<br>', '', re.sub(r'<a.*?>', '',
                 re.findall(
-                r'<div class="lyrics">'
-                + r'\n.*\n.*<!--sse-->.+<!--/sse-->',
-                data, re.S)[0], flags=re.S)), flags=re.S), flags=re.S)))
-                
+                    r'<div class="lyrics">'
+                    + r'\n.*\n.*<!--sse-->.+<!--/sse-->',
+                    data, re.S)[0], flags=re.S)), flags=re.S), flags=re.S)))
+
             album += text + '\n#\n'
             # print(text)
 
