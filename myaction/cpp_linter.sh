@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-folders=$()
+folders=$("inlude" "src" "test")
 echo "${folders}"
 
 for folder in $folders; do # Not recommended, will break on whitespace
