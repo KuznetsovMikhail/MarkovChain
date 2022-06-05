@@ -52,4 +52,31 @@ jobs:
     - name: Run Test
       run: /home/runner/work/MarkovChain/MarkovChain/build/test/MarkovChain.test
       
+  on_finish:
+    needs: build_and_test
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts for build_and_test
+        uses: actions/download-artifact@v3
+        with:
+          name: results
+
+      - name: Success message
+        if: ${{ success() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: The job has succeeded.
+          document: results.zip
+
+      - name: Failure message
+        if: ${{ failure() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: The job has failed.
+      
       
