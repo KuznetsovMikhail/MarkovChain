@@ -1,11 +1,12 @@
 name: MarkovChain-Release
 
+on: [push, pull_request]
+
 jobs:
    
-  pull_request:
-    runs-on: ubuntu-latest
-    on: pull_request
-  - name: Telegram Notify
+  pr_notification:
+    runs-on: ubuntu-latest  
+    name: Telegram Notify
     uses: appleboy/telegram-action@master
     with:
       to: ${{ secrets.TELEGRAM_TO }}
@@ -18,7 +19,6 @@ jobs:
         
   python_lint:
     runs-on: ubuntu-latest
-    on: [push, pull_request]
     name: Python lint
     steps:
       - name: Checkout 
@@ -32,7 +32,6 @@ jobs:
         
   shell_lint:
     runs-on: ubuntu-latest
-    on: [push, pull_request]
     name: Shell lint
     steps:
       - name: Checkout 
@@ -41,7 +40,6 @@ jobs:
         uses: azohra/shell-linter@latest
 
   cpp_lint:
-    on: [push, pull_request]
     runs-on: ubuntu-latest
     needs: shell_lint
     name: C++ lint
@@ -51,7 +49,6 @@ jobs:
 
   build_and_test:
     runs-on: ubuntu-latest
-    on: [push, pull_request]
     needs: [cpp_lint, python_lint]
     name: Build and test
     steps:
