@@ -2,7 +2,7 @@
 #include <iostream>
 #include <ctime>
 #include <fstream>
-#include "textgen.h"
+#include "../include/textgen.h"
 
 int main() {
   srand(time(nullptr));
@@ -18,5 +18,3 @@ int main() {
   }
   return 0;
 }
-
-

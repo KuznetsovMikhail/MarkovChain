@@ -22,7 +22,7 @@ jobs:
    
 
         
-  python-lint:
+  python_lint:
     runs-on: ubuntu-latest
     name: Python lint
     steps:
@@ -35,17 +35,18 @@ jobs:
       - name: flake8 lint
         uses: py-actions/flake8@v2
         
-  shell-lint:
+  shell_lint:
     runs-on: ubuntu-latest
+    name: Shell lint
     steps:
       - name: Checkout 
         uses: actions/checkout@v2
       - name: Shell lint
         uses: azohra/shell-linter@latest
 
-  cpp-lint:
+  cpp_lint:
     runs-on: ubuntu-latest
-    needs: shell-lint
+    needs: shell_lint
     name: C++ lint
     steps:
       - uses: actions/checkout@v2
@@ -65,31 +66,45 @@ jobs:
       run: cd build && make
     - name: Run Test
       run: /home/runner/work/MarkovChain/MarkovChain/build/test/MarkovChain.test
+    - name: Generate list
+      if: ${{ always() }}
+      run:  /home/runner/work/MarkovChain/MarkovChain/build/src/PythonGrabber/generate_list.py  
+    - name: Grabber
+      if: ${{ always() }}
+      run:  /home/runner/work/MarkovChain/MarkovChain/build/src/PythonGrabber/grab_reg.py
+    - name: Main
+      if: ${{ always() }}
+      run: /home/runner/work/MarkovChain/MarkovChain/build/test/MarkovChain.info
     - name: Test artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: Test artifacts
+        name: Test_artifacts
         path: /home/runner/work/MarkovChain/MarkovChain/build/test
-    - name: Source artifacts
+    - name: Source_artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: Source artifacts
+        name: Source_artifacts
         path: /home/runner/work/MarkovChain/MarkovChain/build/src
+    - name: Data_artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: Data_artifacts
+        path: /home/runner/work/MarkovChain/MarkovChain/build/data
     - name: Success message
       if: ${{ success() }}
       uses: appleboy/telegram-action@master
       with:
         to: ${{ secrets.TELEGRAM_CHAT_ID }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: The job has succeeded.
-        document: artifacts.zip
+        message: The job was successful.
+        document: Source_artifacts.zip && Test_artifacts.zip && Data_artifacts.zip
     - name: Failure message
       if: ${{ failure() }}
       uses: appleboy/telegram-action@master
       with:
         to: ${{ secrets.TELEGRAM_CHAT_ID }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: The job has failed.
+        message: The job failed.
     
       
       
