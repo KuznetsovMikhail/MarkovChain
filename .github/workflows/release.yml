@@ -6,14 +6,16 @@ jobs:
    
   pr_notification:
     runs-on: ubuntu-latest  
-    name: Telegram Notify
-    uses: appleboy/telegram-action@master
-    with:
-      to: ${{ secrets.TELEGRAM_TO }}
-      token: ${{ secrets.TELEGRAM_TOKEN }}
-      format: markdown
-      message: |
-        A new PR is raised [View all PR's](https://github.com/<user>/<repo>/pulls)       
+    name: Pull request
+    steps:
+    - name: Telegram Notify
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_CHAT_ID }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        format: markdown
+        message: |
+          A new PR is raised [View all PR's](https://github.com/<user>/<repo>/pulls)       
    
 
         
