@@ -71,7 +71,7 @@ jobs:
         name: Test artifacts
         path: /home/runner/work/MarkovChain/MarkovChain/build/test
     - name: Path
-      run: pwd /home/runner/work/MarkovChain/MarkovChain/build && ls
+      run: cd /home/runner/work/MarkovChain/MarkovChain/build && ls
     - name: Artifacts
       uses: actions/upload-artifact@v2
       with:
