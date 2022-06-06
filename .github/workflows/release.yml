@@ -2,7 +2,6 @@ name: MarkovChain-Release
 
 jobs:
    
-
   pull_request:
     runs-on: ubuntu-latest
     on: pull_request
