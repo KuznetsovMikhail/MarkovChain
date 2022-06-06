@@ -69,7 +69,7 @@ jobs:
       run: /home/runner/work/MarkovChain/MarkovChain/build/src/MarkovChain.info
       
       
-    on_finish:
+  on_finish:
     needs: build_and_test
     if: ${{ always() }}
     runs-on: ubuntu-latest
