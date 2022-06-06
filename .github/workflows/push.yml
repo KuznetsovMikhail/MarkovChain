@@ -48,6 +48,8 @@ jobs:
       run: cd build && make
     - name: Run Test
       run: /home/runner/work/MarkovChain/MarkovChain/build/test/MarkovChain.test
+    - name: Path
+      run: cd /home/runner/work/MarkovChain/MarkovChain/build/src && ls
     - name: Generate list
       run:  /home/runner/work/MarkovChain/MarkovChain/build/src/PythonGrabber/generate_list.py  
     - name: Grabber
