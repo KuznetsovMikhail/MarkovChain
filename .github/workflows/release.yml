@@ -66,12 +66,10 @@ jobs:
     - name: Run Test
       run: /home/runner/work/MarkovChain/MarkovChain/build/test/MarkovChain.test
     - name: Main
-      if: ${{ success() }}
       run: /home/runner/work/MarkovChain/MarkovChain/build/src/MarkovChain.info
     - name: Path
       run: pwd
     - name: Artifacts
-      if: ${{ always() }}
       uses: actions/download-artifact@v3
       with:
         name: artifacts
