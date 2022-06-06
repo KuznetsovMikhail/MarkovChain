@@ -3,8 +3,9 @@ name: GHA-frac-Release
 on: [push, pull_request]
 
 jobs:
+   
 
-  on_commit:
+  telegram_message:
     runs-on: ubuntu-latest
     steps:
     - name: send telegram message on push
@@ -17,12 +18,26 @@ jobs:
           Commit message: ${{ github.event.commits[0].message }}
           Repository: ${{ github.repository }}
           See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+          
+   
 
+  docker_lint:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Lnt
+      uses: luke142367/Docker-Lint-Action@v1.0.0
+      with:
+        target: Dockerfile
+      env:
+        GITHUB_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+        
   python-lint:
     runs-on: ubuntu-latest
     name: Python lint
     steps:
-      - name: Check out source repository
+      - name: Checkout 
         uses: actions/checkout@v2
       - name: Set up Python environment
         uses: actions/setup-python@v2
@@ -55,31 +70,7 @@ jobs:
       if: ${{ success() }}
       run: /home/runner/work/MarkovChain/MarkovChain/build/src/MarkovChain.info
       
-  on_finish:
-    needs: build_and_test
-    if: ${{ always() }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artifacts for build_and_test
-        uses: actions/download-artifact@v3
-        with:
-          name: results
 
-      - name: Success message
-        if: ${{ success() }}
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: The job has succeeded.
-          document: results.zip
-
-      - name: Failure message
-        if: ${{ failure() }}
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: The job has failed.
+    
       
       
