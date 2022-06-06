@@ -78,7 +78,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: artifacts
+          run: ls ..
           path: /home/runner/work/MarkovChain/MarkovChain/build
+          
 
       - name: Success message
         if: ${{ success() }}
