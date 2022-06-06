@@ -60,11 +60,6 @@ jobs:
       with:
         name: Source_artifacts
         path: /home/runner/work/MarkovChain/MarkovChain/build/src
-    - name: Data artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: Data_artifacts
-        path: /home/runner/work/MarkovChain/MarkovChain/build/data
     - name: Success message
       if: ${{ success() }}
       uses: appleboy/telegram-action@master
@@ -72,7 +67,7 @@ jobs:
         to: ${{ secrets.TELEGRAM_CHAT_ID }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: The job was successful.
-        document: Source_artifacts.zip && Test_artifacts.zip && Data_artifacts.zip
+        document: Source_artifacts.zip 
     - name: Failure message
       if: ${{ failure() }}
       uses: appleboy/telegram-action@master
