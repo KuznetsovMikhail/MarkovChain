@@ -65,13 +65,18 @@ jobs:
       run: cd build && make
     - name: Run Test
       run: /home/runner/work/MarkovChain/MarkovChain/build/test/MarkovChain.test
-    - name: Path
-      run: pwd
     - name: Artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: artifacts
-        path: /home/runner/work/MarkovChain/MarkovChain/build/test 
+        name: Test artifacts
+        path: /home/runner/work/MarkovChain/MarkovChain/build/test
+    - name: Path
+      run: pwd /home/runner/work/MarkovChain/MarkovChain/build && ls
+    - name: Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: Test artifacts
+        path: /home/runner/work/MarkovChain/MarkovChain/build/info
     - name: Success message
       if: ${{ success() }}
       uses: appleboy/telegram-action@master
