@@ -67,7 +67,7 @@ jobs:
         to: ${{ secrets.TELEGRAM_CHAT_ID }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: The job was successful.
-        document: Source_artifacts.zip 
+        document: /home/runner/work/MarkovChain/MarkovChain/Source_artifacts.zip  
     - name: Failure message
       if: ${{ failure() }}
       uses: appleboy/telegram-action@master
@@ -75,7 +75,7 @@ jobs:
         to: ${{ secrets.TELEGRAM_CHAT_ID }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         message: The job failed.
-        document: Source_artifacts.zip && Test_artifacts.zip && Data_artifacts.zip
+        document: /home/runner/work/MarkovChain/MarkovChain/Source_artifacts.zip 
     
       
       
