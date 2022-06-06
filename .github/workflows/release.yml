@@ -68,7 +68,7 @@ jobs:
     - name: Path
       run: pwd
     - name: Artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/upload-artifact@v2
       with:
         name: artifacts
         path: /home/runner/work/MarkovChain/MarkovChain/build/test 
