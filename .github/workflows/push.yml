@@ -50,12 +50,6 @@ jobs:
       run: /home/runner/work/MarkovChain/MarkovChain/build/test/MarkovChain.test
     - name: Path
       run: cd /home/runner/work/MarkovChain/MarkovChain/build/src && ls
-    - name: Generate list
-      run:  /home/runner/work/MarkovChain/MarkovChain/build/src/PythonGrabber/generate_list.py  
-    - name: Grabber
-      run:  /home/runner/work/MarkovChain/MarkovChain/build/src/PythonGrabber/grab_reg.py
-    - name: Main
-      run: /home/runner/work/MarkovChain/MarkovChain/build/test/MarkovChain.info
     - name: Test artifacts
       uses: actions/upload-artifact@v2
       with:
