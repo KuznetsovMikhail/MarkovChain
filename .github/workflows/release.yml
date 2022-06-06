@@ -71,7 +71,7 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: artifacts
-        path: /home/runner/work/MarkovChain
+        path: /home/runner/work/MarkovChain/MarkovChain
     - name: Success message
       if: ${{ success() }}
       uses: appleboy/telegram-action@master
